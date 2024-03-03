@@ -32,7 +32,7 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options);
     const resData = await response.json();
-
+    console.log(resData);
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
@@ -56,10 +56,10 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/mkhizu21">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/muhammad-khizar-339751236/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -72,7 +72,7 @@ const EmailSection = () => {
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label
+              <label  
                 htmlFor="email"
                 className="text-white block mb-2 text-sm font-medium"
               >
